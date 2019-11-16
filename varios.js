@@ -91,6 +91,16 @@ App.mimimo = function (msg, bot) {
     });
 }
 
+App.counter = function (msg, bot) {
+
+    bot.sendPhoto(msg.chat.id, "./imagenes/WarCounters.png").then(function (data) {
+        setTimeout(function () {
+            bot.deleteMessage(data.chat.id, data.message_id);
+            bot.deleteMessage(data.chat.id, msg.message_id);
+        }, 72000);
+    });
+}
+
 
 
 module.exports = App;
