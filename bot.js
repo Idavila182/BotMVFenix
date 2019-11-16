@@ -104,6 +104,9 @@ bot.onText(/\/minimo/, (msg) => {
 
     varios.mimimo(msg, bot);
 });
+bot.onText(/\/counter/, (msg) => {
+    varios.counter(msg, bot);
+});
 
 bot.onText(/\/mvp/, (msg) => {
 
