@@ -2,13 +2,14 @@
 'use strict'
 const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
-const incrusion = require("./incursiones.js")
-const objetos = require("./objetos.js")
-const ayuda = require("./ayuda.js")
-const naranjas = require("./naranjas.js")
-const varios = require("./varios.js")
-const guerrero = require("./guerroMundial.js")
-const mencion = require("./mencion.js")
+const incrusion = require("./incursiones.js");
+const objetos = require("./objetos.js");
+const ayuda = require("./ayuda.js");
+const naranjas = require("./naranjas.js");
+const varios = require("./varios.js");
+const guerrero = require("./guerroMundial.js");
+const mencion = require("./mencion.js");
+const guerra = require("./guerra.js")
 
 // API Token Telegram
 const token = '952499974:AAFSlojNJVArKJ72aEq7JWT3-3sanythpU0';
@@ -110,10 +111,15 @@ bot.onText(/\/counter/, (msg) => {
 
 bot.onText(/\/mvp/, (msg) => {
 
-    bot.sendMessage(msg.chat.id, "@Escipion87 deja de robar mvp que todos sabemos que los compras")
-    bot.deleteMessage(msg.chat.id, msg.message_id);
+  guerra.mvp(msg, bot);
 
 });
+
+bot.onText(/\/planguerra/, (msg) => {
+
+    guerra.planGuerra(msg, bot);
+  
+  });
 
 bot.onText(/\/calma/, (msg) => {
 
