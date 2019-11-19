@@ -160,6 +160,15 @@ bot.onText(/\/all/, (msg) => {
     mencion.mencion(msg, bot);
 });
 
+bot.onText(/\/dep/, (msg) => {
+    bot.sendMessage(msg.chat.id,"No te equivoques @"+msg.from.username+" estoy muy vivo. Te mando una imagen que representa tu estado el el juego.").then(function (data) {
+        bot.sendPhoto(data.chat.id, "./imagenes/DEP.jpg")
+    });
+
+
+});
+
+
 bot.on('message', function (msg) {
     if (msg.text != undefined) {
         var mensaje = msg.text.trim().split(" ");
