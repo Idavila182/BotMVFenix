@@ -11,7 +11,7 @@ const guerrero = require("./guerroMundial.js");
 const mencion = require("./mencion.js");
 const guerra = require("./guerra.js");
 //const avisos = require("./avisos.js");
-const troleos = require ("./troleos.js")
+const gifs = require ("./gifs.js")
 
 // API Token Telegram
 const token = '952499974:AAFSlojNJVArKJ72aEq7JWT3-3sanythpU0';
@@ -160,7 +160,7 @@ bot.on('message', function (msg) {
 });
 
 bot.onText(/\/manos/, (msg) => {
-    troleos.manos(msg, bot);
+    gifs.manos(msg, bot);
 });
 
 bot.onText(/\/all/, (msg) => {
