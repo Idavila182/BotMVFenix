@@ -10,6 +10,7 @@ implementados += "gtm\n";
 implementados += "guardianes\n";
 implementados += "shield\n";
 implementados += "siniestros\n";
+implementados += "sobrenaturales\n";
 implementados += "wakandianos\n";
 implementados += "xmen\n";
 
