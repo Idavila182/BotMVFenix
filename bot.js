@@ -12,6 +12,7 @@ const mencion = require("./mencion.js");
 const guerra = require("./guerra.js");
 //const avisos = require("./avisos.js");
 const gifs = require("./gifs.js")
+const counter = require("./counter.js");
 
 // API Token Telegram
 const token = '952499974:AAFSlojNJVArKJ72aEq7JWT3-3sanythpU0';
@@ -109,7 +110,7 @@ bot.onText(/\/minimo/, (msg) => {
     varios.mimimo(msg, bot);
 });
 bot.onText(/\/counter/, (msg) => {
-    varios.counter(msg, bot);
+    counter.counter(msg, bot);
 });
 
 bot.onText(/\/mvp/, (msg) => {

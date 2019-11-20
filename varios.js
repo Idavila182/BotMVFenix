@@ -1,7 +1,7 @@
 'use strict'
 var App = function () { };
 
-var archivo = "MVFenix-14";
+var archivo = "MVFenix";
 App.documento = function (msg, bot) {
     bot.sendDocument(msg.chat.id, "./documentos/MVFenix.pdf").then(function (data) {
         setTimeout(function () {
@@ -91,15 +91,6 @@ App.mimimo = function (msg, bot) {
     });
 }
 
-App.counter = function (msg, bot) {
-
-    bot.sendPhoto(msg.chat.id, "./imagenes/WarCounters.png").then(function (data) {
-        setTimeout(function () {
-            bot.deleteMessage(data.chat.id, data.message_id);
-            bot.deleteMessage(data.chat.id, msg.message_id);
-        }, 72000);
-    });
-}
 
 
 
