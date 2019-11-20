@@ -10,7 +10,11 @@ App.manos = function (msg, bot) {
 }
 
 
+App.banquillo = function (msg, bot) {
 
+    bot.sendVideo(msg.chat.id, "./gif/banquillo.mp4")
+       
+}
 
 
 module.exports = App;

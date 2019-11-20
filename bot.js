@@ -11,7 +11,7 @@ const guerrero = require("./guerroMundial.js");
 const mencion = require("./mencion.js");
 const guerra = require("./guerra.js");
 //const avisos = require("./avisos.js");
-const gifs = require ("./gifs.js")
+const gifs = require("./gifs.js")
 
 // API Token Telegram
 const token = '952499974:AAFSlojNJVArKJ72aEq7JWT3-3sanythpU0';
@@ -24,7 +24,7 @@ bot.on('polling_error', function (error) {
 
 // #region Start/Stop
 bot.onText(/^\/start/, function (msg) {
-   // avisos.avisoPrueba();
+    // avisos.avisoPrueba();
     var chatId = msg.chat.id;
     var nameUser = msg.from.first_name;
     bot.sendMessage(chatId, "Ya me han actualizado.\nMira mis novedades en /help")
@@ -114,15 +114,15 @@ bot.onText(/\/counter/, (msg) => {
 
 bot.onText(/\/mvp/, (msg) => {
 
-  guerra.mvp(msg, bot);
+    guerra.mvp(msg, bot);
 
 });
 
 bot.onText(/\/planguerra/, (msg) => {
 
     guerra.planGuerra(msg, bot);
-  
-  });
+
+});
 
 bot.onText(/\/calma/, (msg) => {
 
@@ -148,9 +148,9 @@ bot.on('message', function (msg) {
     if (msg.from.first_name == "Carre" && msg.text != undefined) {
         var texto = msg.text.split(" ");
         for (var i = 0; i < texto.length; i++) {
-            if (texto[i][texto[i].length - 1] == "k"){
+            if (texto[i][texto[i].length - 1] == "k") {
                 var num = parseInt(texto[i].slice(0, -1));
-                if(num!=NaN && num >250){
+                if (num != NaN && num > 250) {
                     bot.sendMessage(msg.chat.id, "¿Piensas que nos impresionas? Deberias subir otro equipo que ese ya no vale.")
                 }
             }
@@ -163,12 +163,22 @@ bot.onText(/\/manos/, (msg) => {
     gifs.manos(msg, bot);
 });
 
+//banquillo
+bot.on('message', function (msg) {
+    if (msg.text != undefined) {
+        var mensaje = msg.text.trim().split(" ");
+        if (mensaje.includes("banquillo")) {
+            gifs.banquillo(msg, bot);
+        }
+    }
+});
+
 bot.onText(/\/all/, (msg) => {
     mencion.mencion(msg, bot);
 });
 
 bot.onText(/\/dep/, (msg) => {
-    bot.sendMessage(msg.chat.id,"No te equivoques @"+msg.from.username+" estoy muy vivo. Te mando una imagen que representa tu estado el el juego.").then(function (data) {
+    bot.sendMessage(msg.chat.id, "No te equivoques @" + msg.from.username + " estoy muy vivo. Te mando una imagen que representa tu estado el el juego.").then(function (data) {
         bot.sendPhoto(data.chat.id, "./imagenes/DEP.jpg")
     });
 
