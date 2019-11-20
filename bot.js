@@ -10,7 +10,7 @@ const varios = require("./varios.js");
 const guerrero = require("./guerroMundial.js");
 const mencion = require("./mencion.js");
 const guerra = require("./guerra.js");
-const avisos = require("./avisos.js");
+//const avisos = require("./avisos.js");
 const troleos = require ("./troleos.js")
 
 // API Token Telegram
@@ -24,7 +24,7 @@ bot.on('polling_error', function (error) {
 
 // #region Start/Stop
 bot.onText(/^\/start/, function (msg) {
-    avisos.avisoPrueba();
+   // avisos.avisoPrueba();
     var chatId = msg.chat.id;
     var nameUser = msg.from.first_name;
     bot.sendMessage(chatId, "Ya me han actualizado.\nMira mis novedades en /help")
