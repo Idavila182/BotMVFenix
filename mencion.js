@@ -11,7 +11,7 @@ App.mencion = function (msg, bot) {
     if (nameUser == undefined) {
         nameUser = msg.from.first_name;
     }
-    if (listaCapis.includes(nameUser=="")) {
+    if (listaCapis.includes(nameUser)) {
         if (andaluces.includes(nameUser)) {
             bot.sendMessage(msg.chat.id,"No intentes engañarnos @"+msg.from.username+". Sabemos que sigues de sieta.").then(function (data) {
                 bot.sendPhoto(data.chat.id, "./imagenes/siesta.jpg")

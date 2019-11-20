@@ -9,7 +9,9 @@ const naranjas = require("./naranjas.js");
 const varios = require("./varios.js");
 const guerrero = require("./guerroMundial.js");
 const mencion = require("./mencion.js");
-const guerra = require("./guerra.js")
+const guerra = require("./guerra.js");
+const avisos = require("./avisos.js");
+const troleos = require ("./troleos.js")
 
 // API Token Telegram
 const token = '952499974:AAFSlojNJVArKJ72aEq7JWT3-3sanythpU0';
@@ -22,6 +24,7 @@ bot.on('polling_error', function (error) {
 
 // #region Start/Stop
 bot.onText(/^\/start/, function (msg) {
+    avisos.avisoPrueba();
     var chatId = msg.chat.id;
     var nameUser = msg.from.first_name;
     bot.sendMessage(chatId, "Ya me han actualizado.\nMira mis novedades en /help")
@@ -154,6 +157,10 @@ bot.on('message', function (msg) {
         }
         //  bot.sendMessage(msg.chat.id, "Buuuuu. Ese equipo no vale nada")
     }
+});
+
+bot.onText(/\/manos/, (msg) => {
+    troleos.manos(msg, bot);
 });
 
 bot.onText(/\/all/, (msg) => {
