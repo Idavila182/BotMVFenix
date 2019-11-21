@@ -145,13 +145,14 @@ bot.on("photo", (msg) => {
 */
 
 });
+//troleo Carre
 bot.on('message', function (msg) {
     if (msg.from.first_name == "Carre" && msg.text != undefined) {
         var texto = msg.text.split(" ");
         for (var i = 0; i < texto.length; i++) {
             if (texto[i][texto[i].length - 1] == "k") {
                 var num = parseInt(texto[i].slice(0, -1));
-                if (num != NaN && num > 250) {
+                if (num != NaN && num >= 250) {
                     bot.sendMessage(msg.chat.id, "¿Piensas que nos impresionas? Deberias subir otro equipo que ese ya no vale.")
                 }
             }
@@ -186,7 +187,7 @@ bot.onText(/\/dep/, (msg) => {
 
 });
 
-
+//strike
 bot.on('message', function (msg) {
     if (msg.text != undefined) {
         var mensaje = msg.text.trim().split(" ");
