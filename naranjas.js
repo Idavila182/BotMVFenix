@@ -2,10 +2,11 @@
 
 var App = function () { };
 const fs = require('fs');
-var implementados = "Los equipos con prioridad de naranjas dispoibles son:\n";
+var implementados = "Los equipos con prioridad de naranjas disponibles son:\n";
 implementados += "4f\n";
 implementados += "aim\n";
 implementados += "armaduras\n";
+implemetados += "defenders\n"
 implementados += "gtm\n";
 implementados += "guardianes\n";
 implementados += "shield\n";

@@ -2,7 +2,7 @@
 var App = function () { };
 
 var texto = "Mis comandos son :\n";
-texto += " /all menciona a todos las personas del grupo. Si se añade un mensaje lo envia y ancla.(Solo capitanes)";
+texto += " /all menciona a todos las personas del grupo. Si se añade un mensaje lo envia y ancla.(Solo capitanes)\n";
 texto += " /alfa /beta /gamma /ultimus para ver el mapa de la incursion correspondiente\n";
 texto += " /calma para cuando la cosa se pone tensa.\n";
 texto += " /counter para ver imagenes de los counter de guerra.\n";
