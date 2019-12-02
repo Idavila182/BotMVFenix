@@ -9,6 +9,7 @@ implementados += "armaduras\n";
 implementados += "defenders\n"
 implementados += "gtm\n";
 implementados += "guardianes\n";
+implementados += "kree\n";
 implementados += "shield\n";
 implementados += "siniestros\n";
 implementados += "spider\n";
