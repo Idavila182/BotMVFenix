@@ -73,7 +73,7 @@ App.unicos = function (msg, bot) {
 }
 
 App.discord = function (msg, bot) {
-    bot.sendMessage(msg.chat.id, "https://discord.gg/679X3qa").then(function (data) {
+    bot.sendMessage(msg.chat.id, "https://discord.gg/P77JS5u").then(function (data) {
         setTimeout(function () {
             bot.deleteMessage(data.chat.id, data.message_id);
             bot.deleteMessage(data.chat.id, msg.message_id);
