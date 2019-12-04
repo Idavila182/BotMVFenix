@@ -10,6 +10,7 @@ const varios = require("./varios.js");
 const guerrero = require("./guerroMundial.js");
 const mencion = require("./mencion.js");
 const guerra = require("./guerra.js");
+const fails = require("./fails.js");
 //const avisos = require("./avisos.js");
 const gifs = require("./gifs.js")
 const counter = require("./counter.js");
@@ -199,6 +200,15 @@ bot.on('message', function (msg) {
         }
     }
 });
+
+
+bot.onText(/\/fails/, (msg) => {
+   fails.obtenerFail(msg, bot);
+});
+bot.onText(/\/addfails/, (msg) => {
+    fails.sumarFail(msg, bot);
+ });
+
 
 bot.onText(/\/prueba/, (msg) => {
     console.log(msg.chat.id)
