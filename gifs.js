@@ -9,6 +9,14 @@ App.manos = function (msg, bot) {
        
 }
 
+App.nodos = function (msg, bot) {
+
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendVideo(msg.chat.id, "./gif/nodos.mp4")
+       
+}
+
+
 
 App.banquillo = function (msg, bot) {
 

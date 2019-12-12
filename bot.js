@@ -165,6 +165,9 @@ bot.on('message', function (msg) {
 bot.onText(/\/manos/, (msg) => {
     gifs.manos(msg, bot);
 });
+bot.onText(/\/nodos/, (msg) => {
+    gifs.nodos(msg, bot);
+});
 
 //banquillo
 bot.on('message', function (msg) {

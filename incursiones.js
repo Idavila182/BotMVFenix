@@ -38,5 +38,5 @@ App.ultimus=function(msg,bot){
     });
 }
 
-App
+
 module.exports = App;
