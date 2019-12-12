@@ -1,9 +1,9 @@
 'use strict'
 var App = function () { };
 
-var st1 = "@Escipion87  @El_Comediante @Haokarlos @antpgar"/*@Xterminator81 @Goldo4125 Juan @Quinta90 */
-var st2 = " @CarreMSF @Orchryst @Lapipol" /* Luis @JCH_0 @AITORDELIA @Mononoke0614 @Kurgan */
-var st3 = "@IDavila @Ismaelaz  @Puigdemont" /* Tomqui @AleixRisco @saetix @Lia_lii @DiGuti85*/
+var st1 = "@Escipion87  @El_Comediante @Haokarlos @antpgar @Lia_lii @Goldo4125 Juan @Lemonhase"
+var st2 = " @CarreMSF @Orchryst @Lapipol @LuisCris @Coñandante Jefe @AITORDELIA @Mononoke0614 @Kurgan"
+var st3 = "@IDavila @Ismaelaz  @Puigdemont @Tomqui @AleixRisco @saetix @SGRUNG @DiGuti85"
 const listaCapis = ["CarreMSF", "El_Comediante", "Haokarlos", "Orchryst", "Ismaelaz", "IDavila", "antpgar", "Escipion87", "Puigdemont"];
 const andaluces = ["antpgar", "Escipion87", "Puigdemont"];
 App.mencion = function (msg, bot) {
