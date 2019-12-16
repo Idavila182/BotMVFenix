@@ -1,11 +1,11 @@
 'use strict'
 var App = function () { };
 
-var st1 = "@Escipion87  @El_Comediante @Haokarlos @antpgar @Lia_lii @Goldo4125 Juan @Lemonhase"
-var st2 = " @CarreMSF @Orchryst @Lapipol @LuisCris @Coñandante Jefe @AITORDELIA @Mononoke0614 @Kurgan"
+var st1 = "@Escipion87  @El_Comediante @Haokarlos @antpgar @Lia_lii @Goldo4125 @JuanRR_92 @Lemonhase"
+var st2 = " @CarreMSF @Orchryst @Lapipol @LuisCris @ConyandanteJefe @AITORDELIA @Mononoke0614 @Kurgan"
 var st3 = "@IDavila @Ismaelaz  @Puigdemont @Tomqui @AleixRisco @saetix @SGRUNG @DiGuti85"
 const listaCapis = ["CarreMSF", "El_Comediante", "Haokarlos", "Orchryst", "Ismaelaz", "IDavila", "antpgar", "Escipion87", "Puigdemont"];
-const andaluces = ["antpgar", "Escipion87", "Puigdemont"];
+const andaluces = ["antpgar", "Puigdemont"];
 App.mencion = function (msg, bot) {
     var nameUser = msg.from.username;
     if (nameUser == undefined) {
@@ -13,7 +13,7 @@ App.mencion = function (msg, bot) {
     }
     if (listaCapis.includes(nameUser)) {
         if (andaluces.includes(nameUser)) {
-            bot.sendMessage(msg.chat.id,"No intentes engañarnos @"+msg.from.username+". Sabemos que sigues de sieta.").then(function (data) {
+            bot.sendMessage(msg.chat.id,"No intentes engañarnos @"+msg.from.username+". Sabemos que sigues de siesta.").then(function (data) {
                 bot.sendPhoto(data.chat.id, "./imagenes/siesta.jpg")
             });
 

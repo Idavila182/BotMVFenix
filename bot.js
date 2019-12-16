@@ -133,15 +133,22 @@ bot.onText(/\/calma/, (msg) => {
 
 });
 
+bot.onText(/\/orbes/, (msg) => {
+
+    bot.sendPhoto(msg.chat.id, "./imagenes/OrbsPrediction.jpg")
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+
+});
+
 //fotos Carre
 bot.on("photo", (msg) => {
     //console.log(msg)
     if (msg.from.first_name == "Carre") {
         // console.log("entra")
-        bot.sendMessage(msg.chat.id, "Ya sabemos que eres el mejor. Deja de restregarnoslo")
+        bot.sendMessage(msg.chat.id, "Ya sabemos que eres el mejor. Deja de restregárnoslo")
     }/*
     else {
-        bot.sendMessage(msg.chat.id, "Animo. Entre todo podemos derrotar a Carre")
+        bot.sendMessage(msg.chat.id, "Ánimo. Entre todo podemos derrotar a Carre")
     }
 */
 
@@ -154,7 +161,7 @@ bot.on('message', function (msg) {
             if (texto[i][texto[i].length - 1] == "k") {
                 var num = parseInt(texto[i].slice(0, -1));
                 if (num != NaN && num >= 250) {
-                    bot.sendMessage(msg.chat.id, "¿Piensas que nos impresionas? Deberias subir otro equipo que ese ya no vale.")
+                    bot.sendMessage(msg.chat.id, "¿Piensas que nos impresionas? Deberías subir otro equipo que ese ya no vale.")
                 }
             }
         }
