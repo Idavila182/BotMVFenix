@@ -129,14 +129,19 @@ bot.onText(/\/planguerra/, (msg) => {
 bot.onText(/\/calma/, (msg) => {
 
     bot.sendPhoto(msg.chat.id, "./imagenes/calma.jpg")
-    bot.deleteMessage(msg.chat.id, msg.message_id);
 
 });
 
+
 bot.onText(/\/orbes/, (msg) => {
 
-    bot.sendPhoto(msg.chat.id, "./imagenes/OrbsPrediction.jpg")
-    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendPhoto(msg.chat.id, "./imagenes/OrbsPrediction.jpg").then(function (data) {
+        setTimeout(function () {
+            bot.deleteMessage(msg.chat.id, msg.message_id);
+            bot.deleteMessage(data.chat.id, data.message_id);
+        }, 72000);
+
+    });
 
 });
 
