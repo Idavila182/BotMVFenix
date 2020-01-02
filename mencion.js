@@ -1,10 +1,10 @@
 'use strict'
 var App = function () { };
 
-var st1 = "@Escipion87  @El_Comediante @Haokarlos @antpgar @Lia_lii @Goldo4125 @JuanRR_92 @Lemonhase"
-var st2 = " @CarreMSF @Orchryst @Lapipol @LuisCris @ConyandanteJefe @AITORDELIA @Mononoke0614 @Kurgan"
-var st3 = "@IDavila @Ismaelaz  @Puigdemont @Tomqui @AleixRisco @saetix @SGRUNG @DiGuti85"
-const listaCapis = ["CarreMSF", "El_Comediante", "Haokarlos", "Orchryst", "Ismaelaz", "IDavila", "antpgar", "Escipion87", "Puigdemont"];
+var st1 = "@Escipion87  @El_Comediante @Haokarlos @antpgar @Lia_lii @Goldo4125 @AITORDELIA @Lemonhase"
+var st2 = " @CarreMSF @Orchryst @Lapipol @LuisCris @ConyandanteJefe @JuanRR_92 @saetix @Kurgan"
+var st3 = "@IDavila @Ismaelaz  @Puigdemont @Tomqui @AleixRisco @Mononoke0614 @SGRUNG @DiGuti85"
+const listaCapis = ["CarreMSF", "El_Comediante", "Haokarlos", "Orchryst", "IDavila", "antpgar", "Escipion87", "Puigdemont"];
 const andaluces = ["antpgar", "Puigdemont"];
 App.mencion = function (msg, bot) {
     var nameUser = msg.from.username;
@@ -18,9 +18,16 @@ App.mencion = function (msg, bot) {
             });
 
         }
+        /*
         else if(nameUser=="Ismaelaz"){
             bot.sendMessage(msg.chat.id,"Por favor @"+msg.from.username+" este comando es muy importante. Confirma que estas en condiciones.").then(function (data) {
                 bot.sendPhoto(data.chat.id, "./imagenes/siesta.jpg")
+            });
+        }
+        */
+        else if(nameUser=="IDavila"){
+            bot.sendMessage(msg.chat.id,"@"+msg.from.username+" deja ese trabajo nuevo que no te deja tiempo para el juego. Ni para programarme.").then(function (data) {
+                bot.sendPhoto(data.chat.id, "./imagenes/Trabajar.jpg")
             });
         }
         else {
