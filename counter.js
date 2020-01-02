@@ -9,7 +9,7 @@ implemntados += "\ncoulson sobrenatural";
 App.counter = function (msg, bot) {
     var texto = msg.text.trim().split(" ");
     if (texto.length == 1) {
-        bot.sendPhoto(msg.chat.id, "./imagenes/WarCounters.png").then(function (data) {
+        bot.sendPhoto(msg.chat.id, "./imagenes/WarCounters.jpg").then(function (data) {
             bot.sendMessage(msg.chat.id, implemntados).then(function (dataM) {
                 setTimeout(function () {
                     bot.deleteMessage(data.chat.id, dataM.message_id);
@@ -33,6 +33,9 @@ App.counter = function (msg, bot) {
 
     }
 }
+
+
+
 
 
 module.exports = App;
