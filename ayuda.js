@@ -7,6 +7,7 @@ texto += " /alfa /beta /gamma /ultimus para ver el mapa de la incursion correspo
 texto += " /calma para cuando la cosa se pone tensa.\n";
 texto += " /counter para ver imagenes de los counter de guerra.\n";
 texto += " /counter + equipo/personaje para ver video de counter.\n";
+texto += " /defguide para ver recomendaciones de equipos de ataque y defensa en guerras\n";
 texto += " /dep para ver si sigo vivo\n";
 texto += " /documento para obtener el pdf de la alianza\n";
 texto += " /discord para obtener el enlace de discord del grupo\n";

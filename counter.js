@@ -35,7 +35,14 @@ App.counter = function (msg, bot) {
 }
 
 
-
+App.guia = function (msg, bot) {
+    bot.sendPhoto(msg.chat.id, "./imagenes/defguide.jpg").then(function (data) {
+        setTimeout(function () {
+            bot.deleteMessage(data.chat.id, data.message_id);
+            bot.deleteMessage(data.chat.id, msg.message_id);
+        }, 72000);
+    });
+}
 
 
 module.exports = App;
