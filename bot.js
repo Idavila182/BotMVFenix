@@ -115,7 +115,14 @@ bot.onText(/\/counter/, (msg) => {
 });
 
 bot.onText(/\/defguide/, (msg) => {
-    counter.counter(msg, bot);
+    bot.sendPhoto(msg.chat.id, "./imagenes/defguide.jpg").then(function (data) {
+        setTimeout(function () {
+            bot.deleteMessage(msg.chat.id, msg.message_id);
+            bot.deleteMessage(data.chat.id, data.message_id);
+        }, 72000);
+
+    });
+
 });
 
 bot.onText(/\/mvp/, (msg) => {
