@@ -114,6 +114,10 @@ bot.onText(/\/counter/, (msg) => {
     counter.counter(msg, bot);
 });
 
+bot.onText(/\/defguide/, (msg) => {
+    counter.counter(msg, bot);
+});
+
 bot.onText(/\/mvp/, (msg) => {
 
     guerra.mvp(msg, bot);
