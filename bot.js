@@ -155,7 +155,7 @@ bot.onText(/\/orbes/, (msg) => {
     });
 
 });
-
+/*
 //fotos Carre
 bot.on("photo", (msg) => {
     //console.log(msg)
@@ -166,7 +166,7 @@ bot.on("photo", (msg) => {
     else {
         bot.sendMessage(msg.chat.id, "Ánimo. Entre todo podemos derrotar a Carre")
     }
-*/
+
 
 });
 //troleo Carre
@@ -184,7 +184,7 @@ bot.on('message', function (msg) {
         //  bot.sendMessage(msg.chat.id, "Buuuuu. Ese equipo no vale nada")
     }
 });
-
+*/
 bot.onText(/\/manos/, (msg) => {
     gifs.manos(msg, bot);
 });
