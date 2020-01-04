@@ -115,7 +115,14 @@ bot.onText(/\/counter/, (msg) => {
 });
 
 bot.onText(/\/defguide/, (msg) => {
-    counter.counter(msg, bot);
+    bot.sendPhoto(msg.chat.id, "./imagenes/defguide.jpg").then(function (data) {
+        setTimeout(function () {
+            bot.deleteMessage(msg.chat.id, msg.message_id);
+            bot.deleteMessage(data.chat.id, data.message_id);
+        }, 72000);
+
+    });
+
 });
 
 bot.onText(/\/mvp/, (msg) => {
@@ -148,7 +155,7 @@ bot.onText(/\/orbes/, (msg) => {
     });
 
 });
-
+/*
 //fotos Carre
 bot.on("photo", (msg) => {
     //console.log(msg)
@@ -159,7 +166,7 @@ bot.on("photo", (msg) => {
     else {
         bot.sendMessage(msg.chat.id, "Ánimo. Entre todo podemos derrotar a Carre")
     }
-*/
+
 
 });
 //troleo Carre
@@ -177,7 +184,7 @@ bot.on('message', function (msg) {
         //  bot.sendMessage(msg.chat.id, "Buuuuu. Ese equipo no vale nada")
     }
 });
-
+*/
 bot.onText(/\/manos/, (msg) => {
     gifs.manos(msg, bot);
 });
