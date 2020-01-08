@@ -191,7 +191,18 @@ bot.onText(/\/manos/, (msg) => {
 bot.onText(/\/nodos/, (msg) => {
     gifs.nodos(msg, bot);
 });
-
+bot.onText(/\/cuchillo/, (msg) => {
+    gifs.cuchillo(msg, bot);
+});
+bot.onText(/\/fail/, (msg) => {
+    gifs.fail(msg, bot);
+});
+bot.onText(/\/cable/, (msg) => {
+    gifs.cable(msg, bot);
+});
+bot.onText(/\/odin/, (msg) => {
+    gifs.asgardianos(msg, bot);
+});
 //banquillo
 bot.on('message', function (msg) {
     if (msg.text != undefined) {
