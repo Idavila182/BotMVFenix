@@ -16,7 +16,33 @@ App.nodos = function (msg, bot) {
        
 }
 
+App.cuchillo = function (msg, bot) {
 
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendVideo(msg.chat.id, "./gif/cuchillo.mp4")
+       
+}
+
+App.fail = function (msg, bot) {
+
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendVideo(msg.chat.id, "./gif/fail.mp4")
+       
+}
+
+App.cable = function (msg, bot) {
+
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendVideo(msg.chat.id, "./gif/cable.mp4")
+       
+}
+
+App.odin = function (msg, bot) {
+
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendVideo(msg.chat.id, "./gif/asgardianos.mp4")
+       
+}
 
 App.banquillo = function (msg, bot) {
 

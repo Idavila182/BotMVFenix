@@ -185,6 +185,7 @@ bot.on('message', function (msg) {
     }
 });
 */
+
 bot.onText(/\/manos/, (msg) => {
     gifs.manos(msg, bot);
 });
@@ -203,6 +204,7 @@ bot.onText(/\/cable/, (msg) => {
 bot.onText(/\/odin/, (msg) => {
     gifs.asgardianos(msg, bot);
 });
+
 //banquillo
 bot.on('message', function (msg) {
     if (msg.text != undefined) {
