@@ -143,6 +143,11 @@ bot.onText(/\/calma/, (msg) => {
 
 });
 
+bot.onText(/\/trabajoenequipo/, (msg) => {
+
+    bot.sendPhoto(msg.chat.id, "./imagenes/trabajoenequipo.jpg")
+
+});
 
 bot.onText(/\/orbes/, (msg) => {
 
