@@ -44,6 +44,13 @@ App.odin = function (msg, bot) {
        
 }
 
+App.emerito = function (msg, bot) {
+
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendVideo(msg.chat.id, "./gif/emerito.mp4")
+       
+}
+
 App.banquillo = function (msg, bot) {
 
     bot.sendVideo(msg.chat.id, "./gif/banquillo.mp4")

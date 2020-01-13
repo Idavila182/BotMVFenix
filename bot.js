@@ -207,7 +207,11 @@ bot.onText(/\/cable/, (msg) => {
     gifs.cable(msg, bot);
 });
 bot.onText(/\/odin/, (msg) => {
-    gifs.asgardianos(msg, bot);
+    gifs.odin(msg, bot);
+});
+
+bot.onText(/\/emerito/, (msg) => {
+    gifs.emerito(msg, bot);
 });
 
 //banquillo
