@@ -214,6 +214,14 @@ bot.onText(/\/emerito/, (msg) => {
     gifs.emerito(msg, bot);
 });
 
+bot.onText(/\/xavale/, (msg) => {
+    gifs.xavale(msg, bot);
+});
+
+bot.onText(/\/nohomo/, (msg) => {
+    gifs.nohomo(msg, bot);
+});
+
 //banquillo
 bot.on('message', function (msg) {
     if (msg.text != undefined) {

@@ -51,6 +51,20 @@ App.emerito = function (msg, bot) {
        
 }
 
+App.xavale = function (msg, bot) {
+
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendVideo(msg.chat.id, "./gif/xavale.mp4")
+       
+}
+
+App.nohomo = function (msg, bot) {
+
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendVideo(msg.chat.id, "./gif/nohomo.mp4")
+       
+}
+
 App.banquillo = function (msg, bot) {
 
     bot.sendVideo(msg.chat.id, "./gif/banquillo.mp4")
