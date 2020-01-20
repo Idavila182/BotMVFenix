@@ -27,54 +27,82 @@ bot.on('polling_error', function (error) {
 // #region Start/Stop
 bot.onText(/^\/start/, function (msg) {
     // avisos.avisoPrueba();
-    var chatId = msg.chat.id;
-    var nameUser = msg.from.first_name;
-    bot.sendMessage(chatId, "Ya me han actualizado.\nMira mis novedades en /help")
-    bot.deleteMessage(msg.chat.id, msg.message_id);
-
+    var control = mencion.control(msg, bot);
+    if (control) {
+        var chatId = msg.chat.id;
+        var nameUser = msg.from.first_name;
+        bot.sendMessage(chatId, "Ya me han actualizado.\nMira mis novedades en /help")
+        bot.deleteMessage(msg.chat.id, msg.message_id);
+    }
 });
 
 bot.onText(/^\/stop/, function (msg) {
     var chatId = msg.chat.id;
-
-    bot.sendMessage(chatId, "Me desconecto de momento.\nNo me echéis mucho de menos.")
-    bot.deleteMessage(msg.chat.id, msg.message_id);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        bot.sendMessage(chatId, "Me desconecto de momento.\nNo me echéis mucho de menos.")
+        bot.deleteMessage(msg.chat.id, msg.message_id);
+    }
 });
 // #endregion
 
 // #region Incursiones
 bot.onText(/\/alfa/, (msg) => {
-    incrusion.alfa(msg, bot)
+    var control = mencion.control(msg, bot);
+    if (control) {
+        incrusion.alfa(msg, bot);
+    }
 });
 
 bot.onText(/\/beta/, (msg) => {
-    incrusion.beta(msg, bot)
+    var control = mencion.control(msg, bot);
+    if (control) {
+        incrusion.beta(msg, bot);
+    }
 });
 
 bot.onText(/\/gamma/, (msg) => {
-    incrusion.gamma(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        incrusion.gamma(msg, bot);
+    }
 });
 
 bot.onText(/\/ultimus/, (msg) => {
-    incrusion.ultimus(msg, bot)
+    var control = mencion.control(msg, bot);
+    if (control) {
+        incrusion.ultimus(msg, bot)
+    }
 });
 // #endregion
 
 bot.onText(/\/naranjas/, (msg) => {
-    naranjas.naranjas(msg, bot)
+    var control = mencion.control(msg, bot);
+    if (control) {
+        naranjas.naranjas(msg, bot)
+    }
 });
 
 bot.onText(/\/objetos/, (msg) => {
-    objetos.objetos(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        objetos.objetos(msg, bot);
+    }
 });
 
 bot.onText(/\/help/, (msg) => {
-
-    ayuda.ayuda(msg, bot)
+    var control = mencion.control(msg, bot);
+    if (control) {
+        ayuda.ayuda(msg, bot);
+    }
 })
 
 bot.onText(/\/unicos/, (msg) => {
-    varios.unicos(msg, bot);
+
+    var control = mencion.control(msg, bot);
+    if (control) {
+        varios.unicos(msg, bot);
+    }
 });
 
 
@@ -87,77 +115,101 @@ bot.on('message', function (msg) {
 });
 
 bot.onText(/\/documento/, (msg) => {
-    varios.documento(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        varios.documento(msg, bot);
+    }
 
 });
 
 
 bot.onText(/\/guerra/, (msg) => {
-    bot.sendMessage(msg.chat.id, "5 ataques en las 3 primeras horas fdp! Dónde están los refuerzos defensivos q no los veo. Sois todos una panda de vagos");
+    var control = mencion.control(msg, bot);
+    if (control) {
+        bot.sendMessage(msg.chat.id, "5 ataques en las 3 primeras horas fdp! Dónde están los refuerzos defensivos q no los veo. Sois todos una panda de vagos");
+    }
 });
 
 
 bot.onText(/\/mundial/, (msg) => {
-    guerrero.puntos(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        guerrero.puntos(msg, bot);
+    }
 });
 
 bot.onText(/\/discord/, (msg) => {
-
-    varios.discord(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        varios.discord(msg, bot);
+    }
 });
 
 bot.onText(/\/minimo/, (msg) => {
-
-    varios.mimimo(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        varios.mimimo(msg, bot);
+    }
 });
 bot.onText(/\/counter/, (msg) => {
-    counter.counter(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        counter.counter(msg, bot);
+    }
 });
 
 bot.onText(/\/defguide/, (msg) => {
-    bot.sendPhoto(msg.chat.id, "./imagenes/defguide.jpg").then(function (data) {
-        setTimeout(function () {
-            bot.deleteMessage(msg.chat.id, msg.message_id);
-            bot.deleteMessage(data.chat.id, data.message_id);
-        }, 72000);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        bot.sendPhoto(msg.chat.id, "./imagenes/defguide.jpg").then(function (data) {
+            setTimeout(function () {
+                bot.deleteMessage(msg.chat.id, msg.message_id);
+                bot.deleteMessage(data.chat.id, data.message_id);
+            }, 72000);
 
-    });
-
+        });
+    }
 });
 
 bot.onText(/\/mvp/, (msg) => {
-
-    guerra.mvp(msg, bot);
-
+    var control = mencion.control(msg, bot);
+    if (control) {
+        guerra.mvp(msg, bot);
+    }
 });
 
 bot.onText(/\/planguerra/, (msg) => {
-
-    guerra.planGuerra(msg, bot);
-
+    var control = mencion.control(msg, bot);
+    if (control) {
+        guerra.planGuerra(msg, bot);
+    }
 });
 
 bot.onText(/\/calma/, (msg) => {
-
-    bot.sendPhoto(msg.chat.id, "./imagenes/calma.jpg")
-
+    var control = mencion.control(msg, bot);
+    if (control) {
+        bot.sendPhoto(msg.chat.id, "./imagenes/calma.jpg")
+    }
 });
 
 bot.onText(/\/trabajoenequipo/, (msg) => {
-
-    bot.sendPhoto(msg.chat.id, "./imagenes/trabajoenequipo.jpg")
-
+    var control = mencion.control(msg, bot);
+    if (control) {
+        bot.sendPhoto(msg.chat.id, "./imagenes/trabajoenequipo.jpg")
+    }
 });
 
 bot.onText(/\/orbes/, (msg) => {
+    var control = mencion.control(msg, bot);
+    if (control) {
+        bot.sendPhoto(msg.chat.id, "./imagenes/OrbsPrediction.jpg").then(function (data) {
+            setTimeout(function () {
+                bot.deleteMessage(msg.chat.id, msg.message_id);
+                bot.deleteMessage(data.chat.id, data.message_id);
+            }, 72000);
 
-    bot.sendPhoto(msg.chat.id, "./imagenes/OrbsPrediction.jpg").then(function (data) {
-        setTimeout(function () {
-            bot.deleteMessage(msg.chat.id, msg.message_id);
-            bot.deleteMessage(data.chat.id, data.message_id);
-        }, 72000);
-
-    });
+        });
+    }
 
 });
 /*
@@ -192,38 +244,67 @@ bot.on('message', function (msg) {
 */
 
 bot.onText(/\/manos/, (msg) => {
-    gifs.manos(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.manos(msg, bot);
+    }
 });
 bot.onText(/\/nodos/, (msg) => {
-    gifs.nodos(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.nodos(msg, bot);
+    }
 });
 bot.onText(/\/cuchillo/, (msg) => {
-    gifs.cuchillo(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.cuchillo(msg, bot);
+    }
 });
 bot.onText(/\/fail/, (msg) => {
-    gifs.fail(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.fail(msg, bot);
+    }
 });
 bot.onText(/\/cable/, (msg) => {
-    gifs.cable(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.cable(msg, bot);
+    }
 });
 bot.onText(/\/odin/, (msg) => {
-    gifs.odin(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.odin(msg, bot);
+    }
 });
 
 bot.onText(/\/emerito/, (msg) => {
-    gifs.emerito(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.emerito(msg, bot);
+    }
 });
 
 bot.onText(/\/xavale/, (msg) => {
-    gifs.xavale(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.xavale(msg, bot);
+    }
 });
 
 bot.onText(/\/nohomo/, (msg) => {
-    gifs.nohomo(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.nohomo(msg, bot);
+    }
 });
 
 //banquillo
 bot.on('message', function (msg) {
+    // console.log(msg)
+    //mencion.control(msg, bot)
     if (msg.text != undefined) {
         var mensaje = msg.text.trim().split(" ");
         if (mensaje.includes("banquillo")) {
@@ -233,13 +314,19 @@ bot.on('message', function (msg) {
 });
 
 bot.onText(/\/all/, (msg) => {
-    mencion.mencion(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        mencion.mencion(msg, bot);
+    }
 });
 
 bot.onText(/\/dep/, (msg) => {
-    bot.sendMessage(msg.chat.id, "No te equivoques @" + msg.from.username + " estoy muy vivo. Te mando una imagen que representa tu estado el el juego.").then(function (data) {
-        bot.sendPhoto(data.chat.id, "./imagenes/DEP.jpg")
-    });
+    var control = mencion.control(msg, bot);
+    if (control) {
+        bot.sendMessage(msg.chat.id, "No te equivoques @" + msg.from.username + " estoy muy vivo. Te mando una imagen que representa tu estado el el juego.").then(function (data) {
+            bot.sendPhoto(data.chat.id, "./imagenes/DEP.jpg")
+        });
+    }
 
 
 });
@@ -259,21 +346,30 @@ bot.on('message', function (msg) {
 
 
 bot.onText(/\/fails/, (msg) => {
-   fails.obtenerFail(msg, bot);
+    var control = mencion.control(msg, bot);
+    if (control) {
+        fails.obtenerFail(msg, bot);
+    }
 });
 bot.onText(/\/addfails/, (msg) => {
-    fails.sumarFail(msg, bot);
- });
+    var control = mencion.control(msg, bot);
+    if (control) {
+        fails.sumarFail(msg, bot);
+    }
+});
 
 
 bot.onText(/\/prueba/, (msg) => {
-    console.log(msg.chat.id)
-    bot.sendMessage(msg.chat.id, "Alabad a vuestro dios MVFexixbot").then(function (data) {
-        bot.pinChatMessage(data.chat.id, data.message_id)
-    });
-    bot.getChat(msg.chat.id).then(function (data) {
-        console.log(data);
-    });
+    var control = mencion.control(msg, bot);
+    if (control) {
+        console.log(msg.chat.id)
+        bot.sendMessage(msg.chat.id, "Alabad a vuestro dios MVFexixbot").then(function (data) {
+            bot.pinChatMessage(data.chat.id, data.message_id)
+        });
+        bot.getChat(msg.chat.id).then(function (data) {
+            console.log(data);
+        });
+    }
 });
 
 

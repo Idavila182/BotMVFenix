@@ -1,9 +1,11 @@
 'use strict'
 var App = function () { };
 
+var enemigos = "@Mononoke0614 @Kurgan"
+
 var st1 = "@Escipion87  @El_Comediante @Haokarlos @antpgar @Lia_lii @Goldo4125 @AITORDELIA @Lemonhase"
-var st2 = " @CarreMSF @Orchryst @Lapipol @LuisCris @Generaldux @JuanRR_92 @saetix @Kurgan"
-var st3 = "@IDavila @Ismaelaz  @Puigdemont @Tomqui @AleixRisco @Mononoke0614 @SGRUNG @DiGuti85"
+var st2 = " @CarreMSF @Orchryst @Lapipol @LuisCris @Guannnn @JuanRR_92 @saetix @PABLO_MV_FENIX"
+var st3 = "@IDavila @Ismaelaz  @Puigdemont @Tomqui @AleixRisco  @SGRUNG @DiGuti85 @LoveluckA"
 const listaCapis = ["CarreMSF", "El_Comediante", "Haokarlos", "Orchryst", "IDavila", "antpgar", "Escipion87", "Puigdemont"];
 const andaluces = ["antpgar", "Puigdemont"];
 App.mencion = function (msg, bot) {
@@ -13,7 +15,7 @@ App.mencion = function (msg, bot) {
     }
     if (listaCapis.includes(nameUser)) {
         if (andaluces.includes(nameUser)) {
-            bot.sendMessage(msg.chat.id,"No intentes engañarnos @"+msg.from.username+". Sabemos que sigues de siesta.").then(function (data) {
+            bot.sendMessage(msg.chat.id, "No intentes engañarnos @" + msg.from.username + ". Sabemos que sigues de siesta.").then(function (data) {
                 bot.sendPhoto(data.chat.id, "./imagenes/siesta.jpg")
             });
 
@@ -25,8 +27,8 @@ App.mencion = function (msg, bot) {
             });
         }
         */
-        else if(nameUser=="IDavila"){
-            bot.sendMessage(msg.chat.id,"@"+msg.from.username+" deja ese trabajo nuevo que no te deja tiempo para el juego. Ni para programarme.").then(function (data) {
+        else if (nameUser == "IDavila") {
+            bot.sendMessage(msg.chat.id, "@" + msg.from.username + " deja ese trabajo nuevo que no te deja tiempo para el juego. Ni para programarme.").then(function (data) {
                 bot.sendPhoto(data.chat.id, "./imagenes/Trabajar.jpg")
             });
         }
@@ -98,6 +100,29 @@ App.strike = function (msg, bot, strike) {
             }, 72000);
         });
     }
+}
+
+var report = 576142216
+App.control = function (msg, bot) {
+    var nameUser = msg.from.username;
+
+    if (msg.chat.title.includes("Palmeros de Joselof") || msg.chat.title.includes("MV Fenix") || st1.includes(nameUser) || st2.includes(nameUser) || st3.includes(nameUser)) {
+        return true;
+    }
+    else {
+        if (enemigos.includes(nameUser)) {
+            bot.sendMessage(msg.chat.id,"Pensaste que una sucia rata como tu podría usarme? "+nameUser+" no me hagas reir. No mereces todo el trabajo que ha costado programarme. Espero que te vaya bien, aunque con tu gran egoismo va a ser complicado")
+        }
+        else {
+            bot.sendMessage(msg.chat.id, "Solo estoy al servicio de MV Fenix. Larga y prospera vida al Lidl.")
+        }
+        bot.sendMessage(report, nameUser + " esta intentado acceder a mis servicios.");
+
+
+
+        return false;
+    }
+
 }
 
 
