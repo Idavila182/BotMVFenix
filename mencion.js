@@ -2,7 +2,7 @@
 var App = function () { };
 
 var st1 = "@Escipion87  @El_Comediante @Haokarlos @antpgar @Lia_lii @Goldo4125 @AITORDELIA @Lemonhase"
-var st2 = " @CarreMSF @Orchryst @Lapipol @LuisCris @ConyandanteJefe @JuanRR_92 @saetix @Kurgan"
+var st2 = " @CarreMSF @Orchryst @Lapipol @LuisCris @Generaldux @JuanRR_92 @saetix @Kurgan"
 var st3 = "@IDavila @Ismaelaz  @Puigdemont @Tomqui @AleixRisco @Mononoke0614 @SGRUNG @DiGuti85"
 const listaCapis = ["CarreMSF", "El_Comediante", "Haokarlos", "Orchryst", "IDavila", "antpgar", "Escipion87", "Puigdemont"];
 const andaluces = ["antpgar", "Puigdemont"];

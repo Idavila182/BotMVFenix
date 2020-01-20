@@ -143,6 +143,11 @@ bot.onText(/\/calma/, (msg) => {
 
 });
 
+bot.onText(/\/trabajoenequipo/, (msg) => {
+
+    bot.sendPhoto(msg.chat.id, "./imagenes/trabajoenequipo.jpg")
+
+});
 
 bot.onText(/\/orbes/, (msg) => {
 
@@ -185,11 +190,36 @@ bot.on('message', function (msg) {
     }
 });
 */
+
 bot.onText(/\/manos/, (msg) => {
     gifs.manos(msg, bot);
 });
 bot.onText(/\/nodos/, (msg) => {
     gifs.nodos(msg, bot);
+});
+bot.onText(/\/cuchillo/, (msg) => {
+    gifs.cuchillo(msg, bot);
+});
+bot.onText(/\/fail/, (msg) => {
+    gifs.fail(msg, bot);
+});
+bot.onText(/\/cable/, (msg) => {
+    gifs.cable(msg, bot);
+});
+bot.onText(/\/odin/, (msg) => {
+    gifs.odin(msg, bot);
+});
+
+bot.onText(/\/emerito/, (msg) => {
+    gifs.emerito(msg, bot);
+});
+
+bot.onText(/\/xavale/, (msg) => {
+    gifs.xavale(msg, bot);
+});
+
+bot.onText(/\/nohomo/, (msg) => {
+    gifs.nohomo(msg, bot);
 });
 
 //banquillo
