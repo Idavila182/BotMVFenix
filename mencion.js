@@ -106,7 +106,7 @@ var report = 576142216
 App.control = function (msg, bot) {
     var nameUser = msg.from.username;
 
-    if (msg.chat.title.includes("Palmeros de Joselof") || msg.chat.title.includes("MV Fenix") || st1.includes(nameUser) || st2.includes(nameUser) || st3.includes(nameUser)) {
+    if (msg.chat.title.includes("Capitanes AMF Fénix") ||msg.chat.title.includes("Palmeros de Joselof") || msg.chat.title.includes("AMF Fenix") || st1.includes(nameUser) || st2.includes(nameUser) || st3.includes(nameUser)) {
         return true;
     }
     else {
