@@ -29,7 +29,7 @@ App.holaAdios = function (msg, bot) {
         bot.sendMessage(chatId, nameLeftMember + " abandonó el grupo")
     }
 }
-const listaCapis = ["Carre", "El_Comediante", "Haokarlos", "David", "Ismaelaz", "IDavila", "antpgar"];
+const listaCapis = [ "El_Comediante", "David",  "IDavila"];
 
 App.mencion = function (msg, bot) {
     if (msg.text != undefined) {
