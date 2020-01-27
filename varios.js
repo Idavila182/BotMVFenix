@@ -3,7 +3,7 @@ var App = function () { };
 
 var archivo = "MVFenix";
 App.documento = function (msg, bot) {
-    bot.sendDocument(msg.chat.id, "./documentos/MVFenix.pdf").then(function (data) {
+    bot.sendDocument(msg.chat.id, "./documentos/AMFFenix.pdf").then(function (data) {
         setTimeout(function () {
             bot.deleteMessage(data.chat.id, data.message_id);
             bot.deleteMessage(data.chat.id, msg.message_id);

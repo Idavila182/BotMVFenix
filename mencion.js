@@ -114,7 +114,7 @@ App.control = function (msg, bot) {
             bot.sendMessage(msg.chat.id,"Pensaste que una sucia rata como tu podría usarme? "+nameUser+" no me hagas reir. No mereces todo el trabajo que ha costado programarme. Espero que te vaya bien, aunque con tu gran egoismo va a ser complicado")
         }
         else {
-            bot.sendMessage(msg.chat.id, "Solo estoy al servicio de MV Fenix. Larga y prospera vida al Lidl.")
+            bot.sendMessage(msg.chat.id, "Solo estoy al servicio de AFM Fenix. Larga y prospera vida al Lidl.")
         }
         bot.sendMessage(report, nameUser + " esta intentado acceder a mis servicios.");
 
