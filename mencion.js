@@ -3,11 +3,12 @@ var App = function () { };
 
 var enemigos = "@Mononoke0614 @Kurgan"
 
-var st1 = "@Escipion87  @El_Comediante @Haokarlos @antpgar @Lia_lii @Goldo4125 @AITORDELIA @Lemonhase"
-var st2 = " @CarreMSF @Orchryst @Lapipol @LuisCris @Guannnn @JuanRR_92 @saetix @PABLO_MV_FENIX"
-var st3 = "@IDavila @Ismaelaz  @Puigdemont @Tomqui @AleixRisco  @SGRUNG @DiGuti85 @LoveluckA"
-const listaCapis = ["CarreMSF", "El_Comediante", "Haokarlos", "Orchryst", "IDavila", "antpgar", "Escipion87", "Puigdemont"];
+var st1 = "@Fanpiro  @El_Comediante @Darmat12 @R4v3ncl4w @Lia_lii @Goldo4125 @AITORDELIA @Lemonhase"
+var st2 = "Lorien @Orchryst @LuisCris @Guannnn @saetix @PABLO_MV_FENIX @Resakito @Kardelo"
+var st3 = "@IDavila @Ismaelaz  @Puigdemont @Tomqui  @SGRUNG @LoveluckA  Eduardo @JaviPing"
+const listaCapis = ["El_Comediante", "Orchryst", "IDavila","@AITORDELIA","@Kardelo"];
 const andaluces = ["antpgar", "Puigdemont"];
+var amigos="@Escipion87 @Haokarlos @antpgar @CarreMSF @Lapipol @JuanRR_92 @AleixRisco @DiGuti85 "
 App.mencion = function (msg, bot) {
     var nameUser = msg.from.username;
     if (nameUser == undefined) {
@@ -106,7 +107,7 @@ var report = 576142216
 App.control = function (msg, bot) {
     var nameUser = msg.from.username;
 
-    if (msg.chat.title.includes("Palmeros de Joselof") || msg.chat.title.includes("MV Fenix") || st1.includes(nameUser) || st2.includes(nameUser) || st3.includes(nameUser)) {
+    if (msg.chat.title.includes("Capitanes AMF Fénix") ||msg.chat.title.includes("Palmeros de Joselof") || msg.chat.title.includes("AMF Fenix") || st1.includes(nameUser) || st2.includes(nameUser) || st3.includes(nameUser)|| amigos.includes(nameUser)) {
         return true;
     }
     else {
@@ -114,7 +115,7 @@ App.control = function (msg, bot) {
             bot.sendMessage(msg.chat.id,"Pensaste que una sucia rata como tu podría usarme? "+nameUser+" no me hagas reir. No mereces todo el trabajo que ha costado programarme. Espero que te vaya bien, aunque con tu gran egoismo va a ser complicado")
         }
         else {
-            bot.sendMessage(msg.chat.id, "Solo estoy al servicio de MV Fenix. Larga y prospera vida al Lidl.")
+            bot.sendMessage(msg.chat.id, "Solo estoy al servicio de AFM Fenix. Larga y prospera vida al Lidl.")
         }
         bot.sendMessage(report, nameUser + " esta intentado acceder a mis servicios.");
 
