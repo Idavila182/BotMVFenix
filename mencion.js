@@ -3,10 +3,10 @@ var App = function () { };
 
 var enemigos = "@Mononoke0614 @Kurgan"
 
-var st1 = "@Fanpiro  @El_Comediante @Darmat12 @R4v3ncl4w @Lia_lii @Goldo4125 @AITORDELIA @Lemonhase"
-var st2 = "Lorien @Orchryst @LuisCris @Guannnn @saetix @PABLO_MV_FENIX @Resakito @Kardelo"
-var st3 = "@IDavila @Ismaelaz  @Puigdemont @Tomqui  @SGRUNG @LoveluckA  Eduardo @JaviPing"
-const listaCapis = ["El_Comediante", "Orchryst", "IDavila", "@AITORDELIA", "@Kardelo"];
+var st1 = "@Jjironwolf  @CooGuti @Goldo4125 @AITORDELIA Eddu @LuffyFly @criptoKael @SanMateoSF"
+var st2 = " @Orchryst @DaniArevalo @LuisCris @Killer_chris @Guannnn @saetix @PABLO_MV_FENIX @El_Comediante"
+var st3 = "@IDavila  @Puigdemont @Tomqui  @SGRUNG @VictorMakako @ZARVEL @Khildran @ivirius121"
+const listaCapis = ["El_Comediante", "Orchryst", "IDavila", "@AITORDELIA", "@VictorMakako","@SanMateoSF","@ZARVEL","@Khildran"];
 const andaluces = ["antpgar", "Puigdemont"];
 var amigos = "@Escipion87 @Haokarlos @antpgar @CarreMSF @Lapipol @JuanRR_92 @AleixRisco @DiGuti85 "
 App.mencion = function (msg, bot) {
