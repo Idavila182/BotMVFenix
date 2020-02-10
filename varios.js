@@ -20,7 +20,7 @@ App.holaAdios = function (msg, bot) {
         var nameNewMember = msg.new_chat_member.first_name;
 
         bot.sendMessage(chatId, "Hola " + nameNewMember + ", bienvenido al grupo " + chatitle);
-        bot.sendDocument(msg.chat.id, "./documentos/MVFenix.pdf");
+        bot.sendDocument(msg.chat.id, "./documentos/AMFFenix.pdf");
     }
     else if (msg.left_chat_member != undefined) {
 
