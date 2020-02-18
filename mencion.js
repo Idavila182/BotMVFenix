@@ -105,6 +105,10 @@ App.strike = function (msg, bot, strike) {
 
 var report = 576142216
 App.control = function (msg, bot) {
+    var nameUser = msg.from.username;
+    if(nameUser==undefined){
+        nameUser=msg.from.first_name;
+    }
 
     if (enemigos.includes(nameUser)) {
         bot.sendMessage(msg.chat.id, "Pensaste que una sucia rata como tu podría usarme? " + nameUser + " no me hagas reir. No mereces todo el trabajo que ha costado programarme. Espero que te vaya bien, aunque con tu gran egoismo va a ser complicado")
