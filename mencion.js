@@ -105,7 +105,7 @@ App.strike = function (msg, bot, strike) {
 
 var report = 576142216
 App.control = function (msg, bot) {
-    var nameUser = msg.from.username;
+  /*  var nameUser = msg.from.username;
     if(nameUser==undefined){
         nameUser=msg.from.first_name;
     }
@@ -118,7 +118,7 @@ App.control = function (msg, bot) {
         bot.sendMessage(report, nameUser + " esta intentado acceder a mis servicios.");
 
         return false;
-    }
+    }*/
     return true;
 
 }
