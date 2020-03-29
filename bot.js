@@ -123,10 +123,10 @@ bot.onText(/\/documento/, (msg) => {
 });
 
 
-bot.onText(/\/guerra/, (msg) => {
+bot.onText(/\/griegas/, (msg) => {
     var control = mencion.control(msg, bot);
     if (control) {
-        bot.sendMessage(msg.chat.id, "5 ataques en las 3 primeras horas fdp! Dónde están los refuerzos defensivos q no los veo. Sois todos una panda de vagos");
+        bot.sendMessage(msg.chat.id, "Atacamos en la griega. Sois todos una panda de vagos.");
     }
 });
 
