@@ -127,6 +127,7 @@ bot.onText(/\/griegas/, (msg) => {
     var control = mencion.control(msg, bot);
     if (control) {
         bot.sendMessage(msg.chat.id, "Atacamos en la griega. Sois todos una panda de vagos.");
+        bot.deleteMessage(msg.chat.id, msg.message_id);
     }
 });
 
@@ -298,6 +299,13 @@ bot.onText(/\/nohomo/, (msg) => {
     var control = mencion.control(msg, bot);
     if (control) {
         gifs.nohomo(msg, bot);
+    }
+});
+
+bot.onText(/\/latigo/, (msg) => {
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.latigo(msg, bot);
     }
 });
 

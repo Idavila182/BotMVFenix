@@ -65,6 +65,13 @@ App.nohomo = function (msg, bot) {
        
 }
 
+App.latigo = function (msg, bot) {
+
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendVideo(msg.chat.id, "./gif/latigo.mp4")
+       
+}
+
 App.banquillo = function (msg, bot) {
 
     bot.sendVideo(msg.chat.id, "./gif/banquillo.mp4")
