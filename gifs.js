@@ -40,7 +40,7 @@ App.cable = function (msg, bot) {
 App.odin = function (msg, bot) {
 
     bot.deleteMessage(msg.chat.id, msg.message_id);
-    bot.sendVideo(msg.chat.id, "./gif/asgardianos.mp4")
+    bot.sendVideo(msg.chat.id, "./gif/odin.mp4")
        
 }
 
@@ -69,6 +69,13 @@ App.latigo = function (msg, bot) {
 
     bot.deleteMessage(msg.chat.id, msg.message_id);
     bot.sendVideo(msg.chat.id, "./gif/latigo.mp4")
+       
+}
+
+App.choca = function (msg, bot) {
+
+    bot.deleteMessage(msg.chat.id, msg.message_id);
+    bot.sendVideo(msg.chat.id, "./gif/choca.mp4")
        
 }
 

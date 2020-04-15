@@ -309,6 +309,13 @@ bot.onText(/\/latigo/, (msg) => {
     }
 });
 
+bot.onText(/\/choca/, (msg) => {
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.choca(msg, bot);
+    }
+});
+
 //banquillo
 bot.on('message', function (msg) {
     // console.log(msg)
