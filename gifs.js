@@ -85,5 +85,16 @@ App.banquillo = function (msg, bot) {
        
 }
 
+App.barco = function (msg, bot) {
+
+    bot.sendVideo(msg.chat.id, "./gif/barco.mp4")
+       
+}
+
+App.palomitas = function (msg, bot) {
+
+    bot.sendVideo(msg.chat.id, "./gif/palomitas.mp4")
+       
+}
 
 module.exports = App;

@@ -213,6 +213,10 @@ bot.onText(/\/orbes/, (msg) => {
     }
 
 });
+
+
+
+
 /*
 //fotos Carre
 bot.on("photo", (msg) => {
@@ -316,6 +320,13 @@ bot.onText(/\/choca/, (msg) => {
     }
 });
 
+bot.onText(/\/palomitas/, (msg) => {
+    var control = mencion.control(msg, bot);
+    if (control) {
+        gifs.palomitas(msg, bot);
+    }
+});
+
 //banquillo
 bot.on('message', function (msg) {
     // console.log(msg)
@@ -324,6 +335,18 @@ bot.on('message', function (msg) {
         var mensaje = msg.text.trim().split(" ");
         if (mensaje.includes("banquillo")) {
             gifs.banquillo(msg, bot);
+        }
+    }
+});
+
+//barco
+bot.on('message', function (msg) {
+    // console.log(msg)
+    //mencion.control(msg, bot)
+    if (msg.text != undefined) {
+        var mensaje = msg.text.trim().split(" ");
+        if (mensaje.includes("barco")) {
+            gifs.barco(msg, bot);
         }
     }
 });
